@@ -2,6 +2,10 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import OutdoorImg from "../assets/outdoor-shopping.png";
+import Tshirt from "../assets/tshirt.jpeg";
+import { faShippingFast, faStar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Product from "../components/Product";
 
 export default function Home() {
   return (
@@ -17,7 +21,7 @@ export default function Home() {
           <h1 className={styles.headerTitle}>Wear the best.</h1>
           {/* <p>Still the second option holds promise could make the tagline shortlist if you are delivering relaxed.</p> */}
           <div>
-            <div style={{ background: "#529fb6" }} className={styles.linkBox}>
+            <div style={{ background: "#005161" }} className={styles.linkBox}>
               <a>shop now</a>
             </div>
             <div style={{ background: "#000000" }} className={styles.linkBox}>
@@ -36,20 +40,118 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.headerRightWrapper}>
-            <div className={styles.rightTopImg}>
+            <div className={styles.rightImg}>
               <h5>Be your best</h5>
             </div>
-            <div className={styles.rightTopImg}>
+            <div className={styles.rightImg}>
               <h5>Be your best</h5>
             </div>
           </div>
         </div>
       </section>
-      <div className={styles.ourValues}>
-        <div>
-          {/* <Image /> */}
+      <div className={`${styles.ourValues} ${styles.containerX}`}>
+        <div
+          className={`${styles.box} flex flex-col justify-center items-center`}
+        >
+          <div className={styles.iconCircle}>
+            <FontAwesomeIcon
+              color={"#005161"}
+              icon={faShippingFast}
+              style={{ width: 60 }}
+            />
+          </div>
+          <h4 className={`md:w-1/4 text-center`}>
+            Super Fast and Free Delivery
+          </h4>
+        </div>
+        <div className={styles.middleBoxWrapper}>
+          <div className={`${styles.box} flex justify-center items-center`}>
+            <div className={`${styles.iconCircle} mr-4`}>
+              <FontAwesomeIcon
+                color={"#005161"}
+                icon={faShippingFast}
+                style={{ width: 55 }}
+              />
+            </div>
+            <h4 className={`md:w-1/4`}>Non-contact Shipping</h4>
+          </div>
+          <div className={`${styles.box} flex justify-center items-center`}>
+            <div className={`${styles.iconCircle} mr-4`}>
+              <FontAwesomeIcon
+                color={"#005161"}
+                icon={faShippingFast}
+                style={{ width: 55 }}
+              />
+            </div>
+            <h4 className={`md:w-1/4`}>Money-back Guaranteed</h4>
+          </div>
+        </div>
+        <div
+          className={`${styles.box} flex flex-col justify-center items-center`}
+        >
+          <div className={styles.iconCircle}>
+            <FontAwesomeIcon
+              color={"#005161"}
+              icon={faShippingFast}
+              style={{ width: 60 }}
+            />
+          </div>
+          <h4 className={`md:w-1/3`}>Super Secure Payment System</h4>
         </div>
       </div>
+      <section className={`${styles.containerX}`}>
+        <div className={`flex justify-center mb-10`}>
+          <span
+            className={`mx-2 text-xl border rounded-full py-2 px-10 bg-primary text-white`}
+          >
+            All Category
+          </span>
+          <span className={`mx-2 text-xl border rounded-full py-2 px-10`}>
+            Men Product
+          </span>
+          <span className={`mx-2 text-xl border rounded-full py-2 px-10`}>
+            Women Product
+          </span>
+          <span className={`mx-2 text-xl border rounded-full py-2 px-10`}>
+            Accesories
+          </span>
+        </div>
+        <div className={`mb-20 flex flex-wrap`}>
+          <Product />
+          <Product />
+          <Product />
+          <Product />
+        </div>
+      </section>
+      <div className={`${styles.containerX} ${styles.aboutSection}`}>
+        <div className="flex">
+          <div className="w-1/2 max-h-40 mr-5">
+            <h2 className="text-5xl font-bold mb-5">
+              Bringing You the Elements of Style
+            </h2>
+            <Image
+              className={styles.aboutImg}
+              src={OutdoorImg}
+              alt="style image"
+            />
+          </div>
+          <div className="w-1/2 max-h-40 flex flex-col items-center">
+            <h2 className="text-base w-1/2 mb-5">
+              Circle back minimize backwards overflow yet products need full
+              resourcing and support from a cross-functional team in order to be
+              built maintained, and evolved.
+            </h2>
+            <Image
+              className={styles.aboutImg}
+              src={OutdoorImg}
+              alt="style image"
+            />
+          </div>
+        </div>
+      </div>
+      <section>
+     
+      </section>
     </div>
   );
 }

@@ -1,6 +1,10 @@
 .container {
   /* padding: 0 2rem; */
 }
+.containerX {
+  margin-left: 14rem;
+  margin-right: 14rem;
+}
 .headerWrapper {
   margin-bottom: 10rem;
 }
@@ -61,17 +65,22 @@
 .roundText {
   width: 15rem;
   height: 15rem;
-  background-color: #529fb6;
+  background-color: #005161;
   border-radius: 7.5rem;
   margin-right: -7.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.roundText h5 {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
 .headerRightWrapper {
   width: 40%;
 }
-.rightTopImg {
+.rightImg {
   background-image: url('../assets/outdoor-shopping.png');
   background-size: cover;
   background-position: center;
@@ -80,8 +89,46 @@
   height: 25vh;
   margin-bottom: 1.5rem;
   margin-top: -0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.rightImg::after {
+  background: linear-gradient(rgba(0, 0, 0, 0.308), rgba(255, 255, 255, 0));
+}
+.rightImg h5 {
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: bold;
+}
 .ourValues {
   display: flex;
+  justify-content: space-evenly;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+.box {
+  background-color: #fafafa;
+  /* background-color: red; */
+  margin: 0.5rem;
+  flex: 1;
+  padding: 2rem 0;
+}
+.box h4 {
+  font-size: 1.4rem;
+}
+.middleBoxWrapper {
+  flex: 1;
+}
+.iconCircle {
+  background-color: #e5e5e5;
+  border-radius: 50%;
+  padding: 2rem;
+}
+.aboutSection {
+  height: 50vh;
+  margin-bottom: 8rem;
+}
+.aboutImg {
+  height: 20rem;
 }
