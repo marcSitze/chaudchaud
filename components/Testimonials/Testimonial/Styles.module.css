@@ -1,0 +1,11 @@
+.profileImageWrapper {
+  width: 4rem;
+}
+.profileImage {
+  border-radius: 50%;
+  width: 100%;
+}
+.card {
+  width: 35rem;
+  min-width: 35rem;
+}
