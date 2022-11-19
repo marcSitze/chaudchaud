@@ -32,3 +32,8 @@ h1,h2,h3,h4,h5,h6,p {
     font-size: 62.5%;
   }
 }
+
+.containerX {
+  margin-left: 14rem;
+  margin-right: 14rem;
+}
