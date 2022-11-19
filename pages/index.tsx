@@ -6,6 +6,7 @@ import Tshirt from "../assets/tshirt.jpeg";
 import { faShippingFast, faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Product from "../components/Product";
+import Testimonials from "../components/Testimonials";
 
 export default function Home() {
   return (
@@ -21,10 +22,10 @@ export default function Home() {
           <h1 className={styles.headerTitle}>Wear the best.</h1>
           {/* <p>Still the second option holds promise could make the tagline shortlist if you are delivering relaxed.</p> */}
           <div>
-            <div style={{ background: "#005161" }} className={styles.linkBox}>
+            <div className={`${styles.linkBox} bg-secondary`}>
               <a>shop now</a>
             </div>
-            <div style={{ background: "#000000" }} className={styles.linkBox}>
+            <div className={`${styles.linkBox} bg-black`}>
               <a>see promo</a>
             </div>
           </div>
@@ -33,11 +34,14 @@ export default function Home() {
       <section className={styles.headerImgSection}>
         <div className={styles.headerImagesWrapper}>
           <div className={styles.headerLeftWrapper}>
-            {/* <Image src={OutdoorImg} className={styles.headerLeftImg} alt="some image"/> */}
+            <div className={styles.headerLeftOverlay}>
+              <div className="flex-1"></div>
             <h3 className={styles.leftImgText}>STREET STYLE</h3>
             <div className={styles.roundText}>
               <h5>Be your best</h5>
             </div>
+            </div>
+            {/* <Image src={OutdoorImg} className={styles.headerLeftImg} alt="some image"/> */}
           </div>
           <div className={styles.headerRightWrapper}>
             <div className={styles.rightImg}>
@@ -149,8 +153,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <section>
-     
+      <section className="mb-16">
+        <Testimonials />
       </section>
     </div>
   );
