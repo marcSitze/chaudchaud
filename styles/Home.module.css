@@ -18,6 +18,7 @@
   display: flex;
   justify-content: space-evenly;
   margin-top: -5rem;
+  flex-wrap: wrap;
 }
 .headerTitle {
   font-size: 12rem;
@@ -27,6 +28,8 @@
 }
 .headerImgSection {
   margin-bottom: 10rem;
+  margin-left: 14rem;
+  margin-right: 14rem;
 }
 .linkBox {
   width: 30rem;
@@ -42,6 +45,7 @@
 }
 .headerImagesWrapper {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
 }
 .headerLeftWrapper {
@@ -49,7 +53,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 60%;
+  width: 58%;
   height: 50vh;
   position: relative;
   display: flex;
@@ -102,6 +106,14 @@
   justify-content: center;
   align-items: center;
 }
+.rightOverlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 94, 0, 0.192);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .rightImg::after {
   background: linear-gradient(rgba(0, 0, 0, 0.308), rgba(255, 255, 255, 0));
 }
@@ -115,6 +127,8 @@
   justify-content: space-evenly;
   margin-top: 10rem;
   margin-bottom: 10rem;
+  margin-left: 14rem;
+  margin-right: 14rem;
 }
 .box {
   background-color: #fafafa;
@@ -140,4 +154,7 @@
 }
 .aboutImg {
   height: 20rem;
+}
+.subItem {
+  font-size: 1.2rem;
 }
