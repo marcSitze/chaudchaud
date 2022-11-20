@@ -1,9 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import rStyles from "../styles/Responsive.module.css";
 import OutdoorImg from "../assets/outdoor-shopping.png";
 import Tshirt from "../assets/tshirt.jpeg";
-import { faShippingFast, faStar } from "@fortawesome/free-solid-svg-icons";
+import { faShippingFast, faStar, faMoneyBill, faCheckCircle, faDatabase } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Product from "../components/Product";
 import Testimonials from "../components/Testimonials";
@@ -18,107 +19,111 @@ export default function Home() {
       </Head>
       <div className={styles.headerWrapper}>
         <div className={styles.header}></div>
-        <div className={styles.headerText}>
-          <h1 className={styles.headerTitle}>Wear the best.</h1>
+        <div className={`${styles.headerText} ${rStyles.headerText}`}>
+          <h1 className={`${styles.headerTitle} ${rStyles.headerTitle}`}>Wear the best.</h1>
           {/* <p>Still the second option holds promise could make the tagline shortlist if you are delivering relaxed.</p> */}
-          <div>
-            <div className={`${styles.linkBox} bg-secondary`}>
+          <div className={`${rStyles.linkBoxWrapper}`}>
+            <div className={`${styles.linkBox} ${rStyles.linkBox} bg-secondary`}>
               <a>shop now</a>
             </div>
-            <div className={`${styles.linkBox} bg-black`}>
+            <div className={`${styles.linkBox} ${rStyles.linkBox} bg-black`}>
               <a>see promo</a>
             </div>
           </div>
         </div>
       </div>
-      <section className={styles.headerImgSection}>
-        <div className={styles.headerImagesWrapper}>
-          <div className={styles.headerLeftWrapper}>
-            <div className={styles.headerLeftOverlay}>
+      <section className={`${styles.headerImgSection} ${rStyles.headerImgSection}`}>
+        <div className={`${styles.headerImagesWrapper}`}>
+          <div className={`${styles.headerLeftWrapper} ${rStyles.headerLeftWrapper}`}>
+            <div className={`${styles.headerLeftOverlay} ${rStyles.headerLeftOverlay}`}>
               <div className="flex-1"></div>
             <h3 className={styles.leftImgText}>STREET STYLE</h3>
-            <div className={styles.roundText}>
+            <div className={`${styles.roundText} ${rStyles.roundText}`}>
               <h5>Be your best</h5>
             </div>
             </div>
             {/* <Image src={OutdoorImg} className={styles.headerLeftImg} alt="some image"/> */}
           </div>
-          <div className={styles.headerRightWrapper}>
+          <div className={`${styles.headerRightWrapper} ${rStyles.headerRightWrapper}`}>
             <div className={styles.rightImg}>
-              <h5>Be your best</h5>
+              <div className={styles.rightOverlay}>
+                <h5>FORMAL BOY</h5>
+              </div>
             </div>
             <div className={styles.rightImg}>
-              <h5>Be your best</h5>
+              <div className={styles.rightOverlay}>
+                <h5>CASUAL BOY</h5>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <div className={`${styles.ourValues} ${styles.containerX}`}>
+      <div className={`${styles.ourValues} ${rStyles.ourValues}`}>
         <div
           className={`${styles.box} flex flex-col justify-center items-center`}
         >
-          <div className={styles.iconCircle}>
+          <div className={`${styles.iconCircle} mb-4`}>
             <FontAwesomeIcon
               color={"#005161"}
               icon={faShippingFast}
               style={{ width: 60 }}
             />
           </div>
-          <h4 className={`md:w-1/4 text-center`}>
+          <h4 className={`md:w-1/3 text-center`}>
             Super Fast and Free Delivery
           </h4>
         </div>
         <div className={styles.middleBoxWrapper}>
-          <div className={`${styles.box} flex justify-center items-center`}>
-            <div className={`${styles.iconCircle} mr-4`}>
+          <div className={`${styles.box} ${rStyles.box} flex justify-center items-center`}>
+            <div className={`${styles.iconCircle} mb-4 mr-4`}>
               <FontAwesomeIcon
                 color={"#005161"}
-                icon={faShippingFast}
+                icon={faCheckCircle}
                 style={{ width: 55 }}
               />
             </div>
-            <h4 className={`md:w-1/4`}>Non-contact Shipping</h4>
+            <h4 className={`md:w-1/3`}>Non-contact Shipping</h4>
           </div>
-          <div className={`${styles.box} flex justify-center items-center`}>
-            <div className={`${styles.iconCircle} mr-4`}>
+          <div className={`${styles.box} ${rStyles.box} flex justify-center items-center`}>
+            <div className={`${styles.iconCircle} mb-4 mr-4`}>
               <FontAwesomeIcon
                 color={"#005161"}
-                icon={faShippingFast}
+                icon={faMoneyBill}
                 style={{ width: 55 }}
               />
             </div>
-            <h4 className={`md:w-1/4`}>Money-back Guaranteed</h4>
+            <h4 className={`md:w-1/3`}>Money-back Guaranteed</h4>
           </div>
         </div>
         <div
           className={`${styles.box} flex flex-col justify-center items-center`}
         >
-          <div className={styles.iconCircle}>
+          <div className={`${styles.iconCircle} mb-4`}>
             <FontAwesomeIcon
               color={"#005161"}
-              icon={faShippingFast}
-              style={{ width: 60 }}
+              icon={faDatabase}
+              style={{ width: 50 }}
             />
           </div>
-          <h4 className={`md:w-1/3`}>Super Secure Payment System</h4>
+          <h4 className={`md:w-1/2 text-center`}>Super Secure Payment System</h4>
         </div>
       </div>
-      <section className={`${styles.containerX}`}>
-        <div className={`flex justify-center mb-10`}>
-          <span
-            className={`mx-2 text-xl border rounded-full py-2 px-10 bg-primary text-white`}
+      <section className={`containerX`}>
+        <div className={`${rStyles.tabMenuContainer} flex justify-center flex-col md:flex-row text-center mb-10`}>
+          <div
+            className={`${styles.subItem} w-full md:w-1/4 px-4 py-3 m-2 sm:text-sm border rounded-full bg-primary text-white`}
           >
             All Category
-          </span>
-          <span className={`mx-2 text-xl border rounded-full py-2 px-10`}>
+          </div>
+          <div className={`${styles.subItem} w-full md:w-1/4  px-4 py-2 m-2 border rounded-full`}>
             Men Product
-          </span>
-          <span className={`mx-2 text-xl border rounded-full py-2 px-10`}>
+          </div>
+          <div className={`${styles.subItem} w-full md:w-1/4  px-4 py-2 m-2 border rounded-full`}>
             Women Product
-          </span>
-          <span className={`mx-2 text-xl border rounded-full py-2 px-10`}>
+          </div>
+          <div className={`${styles.subItem} w-full md:w-1/4  px-4 py-2 m-2 border rounded-full`}>
             Accesories
-          </span>
+          </div>
         </div>
         <div className={`mb-20 flex flex-wrap`}>
           <Product />
@@ -127,9 +132,9 @@ export default function Home() {
           <Product />
         </div>
       </section>
-      <div className={`${styles.containerX} ${styles.aboutSection}`}>
-        <div className="flex">
-          <div className="w-1/2 max-h-40 mr-5">
+      <div className={`containerX ${styles.aboutSection} ${rStyles.aboutSection}`}>
+        <div className="flex flex-col md:flex-row">
+          <div className="w-full md:w-1/2 md:max-h-40 mr-5">
             <h2 className="text-5xl font-bold mb-5">
               Bringing You the Elements of Style
             </h2>
@@ -139,8 +144,8 @@ export default function Home() {
               alt="style image"
             />
           </div>
-          <div className="w-1/2 max-h-40 flex flex-col items-center">
-            <h2 className="text-base w-1/2 mb-5">
+          <div className="w-full md:w-1/2 md:max-h-40 flex flex-col items-center">
+            <h2 className="text-base w-full md:w-1/2 mb-5">
               Circle back minimize backwards overflow yet products need full
               resourcing and support from a cross-functional team in order to be
               built maintained, and evolved.

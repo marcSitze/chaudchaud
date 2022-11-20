@@ -3,11 +3,12 @@ import Image from "next/image";
 import { faShippingFast, faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Styles.module.css";
+import rStyles from './Responsive.module.css'
 import Profile from "../../../assets/profile.jpeg";
 
 const Testimonial = () => {
   return (
-    <div className={`${styles.card} p-4 bg-white mr-4 flex-1`}>
+    <div className={`${styles.card} ${rStyles.card} p-4 bg-white mr-4 flex-1`}>
       <div className="flex items-center mb-4">
         <div className={`${styles.profileImageWrapper} mr-4`}>
           <Image className={styles.profileImage} src={Profile} alt="profile" />

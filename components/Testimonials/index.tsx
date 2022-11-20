@@ -3,7 +3,7 @@ import Testimonial from './Testimonial'
 
 const Testimonials = () => {
   return (
-    <div className='bg-smoke p-16 containerX flex overflow-x-scroll'>
+    <div className='bg-smoke p-4 md:p-16 containerX flex overflow-x-scroll'>
       <Testimonial />
       <Testimonial />
       <Testimonial />
