@@ -1,30 +1,101 @@
 /* Large Devices (Desktops & Laptops) */
 
 @media (min-width: 1200px) and (max-width: 1299px) {
-
 }
-
 
 /* Medium Devices (Landscape Tablets & Medium Desktops) */
 
 @media (min-width: 992px) and (max-width: 1199px) {
-
 }
-
 
 /* Small Devices (Portrait Tablets & Small Desktops) */
 
 @media (min-width: 768px) and (max-width: 991px) {
+  .headerTitle {
+    font-size: 7rem;
+    line-height: 7rem;
+  }
+  .linkBox {
+    width: 20rem;
+  }
+  .headerImgSection {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .ourValues {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+  /* .iconCircle {
 
+  } */
+  .iconVal {
+    width: 30px;
+  }
+  .menuTabSection {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+  .subItem {
+    font-size: 1rem;
+  }
+  .aboutSection {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
-
 
 /* Extra Small Devices (Landscape Phones & Portrait Tablets) */
 
 @media (max-width: 767px) {
-
+  .headerTitle {
+    font-size: 7rem;
+    line-height: 7rem;
+  }
+  .linkBox {
+    width: 20rem;
+  }
+  .headerImgSection {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .headerLeftOverlay {
+    flex-direction: column;
+  }
+  .headerLeftWrapper {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    margin-right: 0;
+  }
+  .roundText {
+    width: 10rem;
+    height: 10rem;
+    margin-right: 0;
+    margin-bottom: -5.5rem;
+  }
+  .headerRightWrapper {
+    width: 100%;
+  }
+  .ourValues {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+  .iconVal {
+    width: 40px;
+  }
+  .menuTabSection {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+  .subItem {
+    font-size: 1rem;
+  }
+  .aboutSection {
+    height: unset;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
 }
-
 
 /* Extra Small Devices (Portrait Phones & Smaller Devices) */
 
@@ -73,17 +144,21 @@
   .box {
     flex-direction: column;
   }
-  .tabMenuContainer{
+  .menuTabSection {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .tabMenuContainer {
     flex-direction: column;
   }
   .aboutSection {
     height: unset;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
-
 
 /* Extra Small Devices (Portrait Phones & Smaller Devices) */
 
 @media (max-width: 320px) {
-
 }

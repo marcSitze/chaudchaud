@@ -15,15 +15,15 @@
   background-size: cover;
 }
 .headerText {
-  display: flex;
-  justify-content: space-evenly;
+  /* display: flex; */
+  /* justify-content: space-evenly; */
   margin-top: -5rem;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 .headerTitle {
   font-size: 12rem;
   font-weight: bold;
-  width: 50%;
+  width: 48%;
   line-height: 10rem;
 }
 .headerImgSection {
@@ -130,6 +130,9 @@
   margin-left: 14rem;
   margin-right: 14rem;
 }
+.iconVal {
+  width: 60px;
+}
 .box {
   background-color: #fafafa;
   /* background-color: red; */
@@ -148,13 +151,22 @@
   border-radius: 50%;
   padding: 2rem;
 }
+.menuTabSection {
+  margin-left: 14rem;
+  margin-right: 14rem;
+}
 .aboutSection {
   height: 50vh;
   margin-bottom: 8rem;
+  margin-left: 14rem;
+  margin-right: 14rem;
 }
 .aboutImg {
   height: 20rem;
 }
 .subItem {
   font-size: 1.2rem;
+}
+.testimonials {
+  margin-bottom: -6rem;
 }

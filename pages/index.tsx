@@ -8,6 +8,7 @@ import { faShippingFast, faStar, faMoneyBill, faCheckCircle, faDatabase } from "
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Product from "../components/Product";
 import Testimonials from "../components/Testimonials";
+import Footer from "../components/Layouts/Footer";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
       </Head>
       <div className={styles.headerWrapper}>
         <div className={styles.header}></div>
-        <div className={`${styles.headerText} ${rStyles.headerText}`}>
+        <div className={`${styles.headerText} flex justify-evenly flex-wrap ${rStyles.headerText}`}>
           <h1 className={`${styles.headerTitle} ${rStyles.headerTitle}`}>Wear the best.</h1>
           {/* <p>Still the second option holds promise could make the tagline shortlist if you are delivering relaxed.</p> */}
           <div className={`${rStyles.linkBoxWrapper}`}>
@@ -66,10 +67,11 @@ export default function Home() {
             <FontAwesomeIcon
               color={"#005161"}
               icon={faShippingFast}
-              style={{ width: 60 }}
+              // style={{ width: 60 }}
+              className={`${styles.iconVal} ${rStyles.iconVal}`}
             />
           </div>
-          <h4 className={`md:w-1/3 text-center`}>
+          <h4 className={`w-full md:w-1/3 text-center`}>
             Super Fast and Free Delivery
           </h4>
         </div>
@@ -79,7 +81,7 @@ export default function Home() {
               <FontAwesomeIcon
                 color={"#005161"}
                 icon={faCheckCircle}
-                style={{ width: 55 }}
+                className={`${styles.iconVal} ${rStyles.iconVal}`}
               />
             </div>
             <h4 className={`md:w-1/3`}>Non-contact Shipping</h4>
@@ -89,7 +91,7 @@ export default function Home() {
               <FontAwesomeIcon
                 color={"#005161"}
                 icon={faMoneyBill}
-                style={{ width: 55 }}
+                className={`${styles.iconVal} ${rStyles.iconVal}`}
               />
             </div>
             <h4 className={`md:w-1/3`}>Money-back Guaranteed</h4>
@@ -102,37 +104,37 @@ export default function Home() {
             <FontAwesomeIcon
               color={"#005161"}
               icon={faDatabase}
-              style={{ width: 50 }}
+              className={`${styles.iconVal} ${rStyles.iconVal}`}
             />
           </div>
           <h4 className={`md:w-1/2 text-center`}>Super Secure Payment System</h4>
         </div>
       </div>
-      <section className={`containerX`}>
-        <div className={`${rStyles.tabMenuContainer} flex justify-center flex-col md:flex-row text-center mb-10`}>
+      <section className={`${rStyles.menuTabSection} ${styles.menuTabSection}`}>
+        <div className={`${rStyles.tabMenuContainer} flex justify-center flex-col sm:flex-row text-center mb-10`}>
           <div
-            className={`${styles.subItem} w-full md:w-1/4 px-4 py-3 m-2 sm:text-sm border rounded-full bg-primary text-white`}
+            className={`${styles.subItem} ${rStyles.subItem} flex flex-col justify-center w-full sm:w-1/4 px-4 py-3 m-2 sm:text-sm border rounded-full bg-primary text-white`}
           >
             All Category
           </div>
-          <div className={`${styles.subItem} w-full md:w-1/4  px-4 py-2 m-2 border rounded-full`}>
+          <div className={`${styles.subItem} ${rStyles.subItem} flex flex-col justify-center  w-full sm:w-1/4  px-4 py-2 m-2 border rounded-full`}>
             Men Product
           </div>
-          <div className={`${styles.subItem} w-full md:w-1/4  px-4 py-2 m-2 border rounded-full`}>
+          <div className={`${styles.subItem} ${rStyles.subItem} flex flex-col justify-center  w-full sm:w-1/4  px-4 py-2 m-2 border rounded-full`}>
             Women Product
           </div>
-          <div className={`${styles.subItem} w-full md:w-1/4  px-4 py-2 m-2 border rounded-full`}>
+          <div className={`${styles.subItem} ${rStyles.subItem} flex flex-col justify-center  w-full sm:w-1/4  px-4 py-2 m-2 border rounded-full`}>
             Accesories
           </div>
         </div>
-        <div className={`mb-20 flex flex-wrap`}>
+        <div className={`mb-20 flex flex-wrap justify-center`}>
           <Product />
           <Product />
           <Product />
           <Product />
         </div>
       </section>
-      <div className={`containerX ${styles.aboutSection} ${rStyles.aboutSection}`}>
+      <div className={`${styles.aboutSection} ${rStyles.aboutSection}`}>
         <div className="flex flex-col md:flex-row">
           <div className="w-full md:w-1/2 md:max-h-40 mr-5">
             <h2 className="text-5xl font-bold mb-5">
@@ -145,7 +147,7 @@ export default function Home() {
             />
           </div>
           <div className="w-full md:w-1/2 md:max-h-40 flex flex-col items-center">
-            <h2 className="text-base w-full md:w-1/2 mb-5">
+            <h2 className="text-base w-full sm:w-1/2 md:w-2/3 mb-5">
               Circle back minimize backwards overflow yet products need full
               resourcing and support from a cross-functional team in order to be
               built maintained, and evolved.
@@ -158,9 +160,10 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <section className="mb-16">
+      <section className={`${styles.testimonials} flex justify-center`}>
         <Testimonials />
       </section>
+      <Footer />
     </div>
   );
 }
