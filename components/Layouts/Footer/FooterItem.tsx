@@ -1,6 +1,6 @@
 import React from 'react'
 
-const FooterItem = ({ title, divst}: { title:string, divst: string[]}) => {
+const FooterItem = ({ title, list}: { title:string, list: string[]}) => {
   return (
     <div className='my-2 text-center sm:text-left w-full sm:w-1/2 md:w-1/4 text-white flex flex-col items-center'>
       <div>
