@@ -1,0 +1,18 @@
+.container {
+  position: absolute;
+  width: 100%;
+  padding-left: 14rem;
+  padding-right: 14rem;
+  z-index: 10;
+}
+.logoWrapper {
+  width: 8rem;
+}
+.navItem {
+  transition: all 0.2s ease-in-out;
+  text-decoration: underline transparent;
+}
+.navItem:hover {
+  text-decoration: underline #e3602d 3px;
+  cursor: pointer;
+}
