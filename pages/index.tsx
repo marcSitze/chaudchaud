@@ -10,6 +10,7 @@ import Product from "../components/Product";
 import Testimonials from "../components/Testimonials";
 import Footer from "../components/Layouts/Footer";
 import Navbar from "../components/Layouts/Navbar";
+import ProductsData from '../helpers/productsData'
 
 export default function Home() {
   return (
@@ -130,10 +131,7 @@ export default function Home() {
           </div>
         </div>
         <div className={`mb-20 flex flex-wrap justify-center`}>
-          <Product />
-          <Product />
-          <Product />
-          <Product />
+          {ProductsData.filter(product => product.id < 5).map((item => <Product key={item.id} product={item} />))}
         </div>
       </section>
       <div className={`${styles.aboutSection} ${rStyles.aboutSection}`}>
