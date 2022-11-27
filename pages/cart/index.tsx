@@ -78,7 +78,7 @@ const Cart = () => {
             ))}
           </div>
           {cart.length ? (
-            <div className="sm:hidden">
+            <div className="sm:hidden mb-4">
               <button onClick={() => router.push('/checkout')} className="text-white text-base font-bold py-3 w-full bg-primary">
                 Checkout{" "}
                 <span className="ml-4">
@@ -91,7 +91,7 @@ const Cart = () => {
               </button>
             </div>
           ): null}
-          <Link href={'/shop'}>Continue shopping ?</Link>
+          <Link className="ml-4" href={'/shop'}>Continue shopping ?</Link>
         </div>
     </div>
   );
