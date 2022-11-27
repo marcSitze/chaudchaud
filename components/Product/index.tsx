@@ -22,7 +22,7 @@ const Product = ({ product }: { product: Product }) => {
       {/* <div className={`h-full`}>
             </div> */}
       <div className="flex justify-between items-center">
-        <div>
+        <div className="w-3/5">
           {/* <h4 onClick={() => router.push(`/shop/${product.id}`)} className={`text-lg font-bold mb-2`}>Kaos Ngabers</h4> */}
           <h4 className={`text-lg font-bold mb-2`}>
             <Link href={`/shop/${product?.id}`}>{product?.name ?? "Kaos Ngabers"}</Link>
@@ -47,7 +47,7 @@ const Product = ({ product }: { product: Product }) => {
           </div>
         </div>
         <div className="self-end">
-          <button onClick={() => addToCart(product)} className="bg-primary text-white font-bold text-lg rounded-full py-2 px-4">
+          <button onClick={() => addToCart(product)} className="bg-primary text-white font-bold text-sm sm:text-lg rounded-full py-2 px-4">
             Add to cart
           </button>
         </div>
