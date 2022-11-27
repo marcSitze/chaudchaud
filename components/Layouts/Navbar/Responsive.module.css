@@ -39,6 +39,9 @@
   .col {
     width: 100%;
   }
+  .logoWrapper {
+    width: 5rem;
+  }
 }
 
 /* Extra Small Devices (Portrait Phones & Smaller Devices) */
