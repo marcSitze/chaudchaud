@@ -14,13 +14,13 @@ const Navbar = () => {
   return (
     <div className={`${styles.container} ${rStyles.container}`}>
       <div className="flex items-center justify-between">
-        <div className={`${styles.logoWrapper}`}>
+        <div className={`${styles.logoWrapper} ${rStyles.logoWrapper}`}>
           <Link href='/'><Image src={logo} alt="logo primary" /></Link>
         </div>
         <div className="flex items-center">
-          <span className={`${styles.navItem} font-bold text-xl mr-6`}><Link href="/about">About</Link></span>
-          <span className={`${styles.navItem} font-bold text-xl mr-6`}><Link href="/shop">Shop</Link></span>
-          <span className={`${styles.navItem} font-bold text-xl mr-6`}><Link href="/cart"><FontAwesomeIcon style={{ width: 25}} icon={faCartShopping} />{`(${cart.length})`}</Link></span>
+          <span className={`${styles.navItem} font-bold text-sm sm:text-xl mr-6`}><Link href="/about">About</Link></span>
+          <span className={`${styles.navItem} font-bold text-sm sm:text-xl mr-6`}><Link href="/shop">Shop</Link></span>
+          <span className={`${styles.navItem} font-bold text-sm sm:text-xl mr-6`}><Link href="/cart"><span><FontAwesomeIcon style={{ width: 25}} icon={faCartShopping} /></span><span>{`(${cart.length})`}</span></Link></span>
         </div>
       </div>
     </div>
