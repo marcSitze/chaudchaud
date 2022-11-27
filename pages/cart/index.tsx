@@ -51,7 +51,7 @@ const Cart = () => {
               {cart.reduce(
                 (a: number, b: ICartItem) => Number(a) + Number(b.total),
                 0
-              ) ?? "$189.00"}
+              ) ?? "$189.00"} XAF
             </span>
           </h3>
           <p className="text-lg mb-14">Shipping calculated at checkout</p>
@@ -61,7 +61,7 @@ const Cart = () => {
             <p className="text-base ml-2">I agree to terms and conditions</p>
           </div>
           <div>
-            <button className="text-lg font-bold bg-black text-white py-2 px-4 rounded-full">
+            <button onClick={() => router.push('/checkout')} className="text-lg font-bold bg-black text-white py-2 px-4 rounded-full">
               Checkout{" "}
               <FontAwesomeIcon
                 icon={faLock}
