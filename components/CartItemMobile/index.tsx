@@ -48,9 +48,9 @@ const CartItemMobile = ({ item }: { item: CartItem}) => {
             <p className="text-sm">Color: red</p>
             <div className="flex justify-between items-center">
               <p className="text-sm font-bold">{item?.total ?? "2000 XAF"}{" "}XAF</p>
-              <div className="flex justify-between text-2xl">
+              <div className="flex justify-between items-center text-2xl">
                 <button onClick={reduceQuantity} className="flex-1 px-3">-</button>
-                <span className="px-2">{item?.quantity}</span>
+                <span className="px-2 text-base">{item?.quantity}</span>
                 <button onClick={updateProductQuantity} className="flex-1 px-3">+</button>
               </div>
             </div>
