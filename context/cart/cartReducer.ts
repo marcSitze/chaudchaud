@@ -5,33 +5,6 @@ function CartReducer(state: any, action: any) {
   switch (action.type) {
     case types.ADD_TO_CART:
       let toAddItems = [...state.cart];
-      // console.log("action: ", action);
-      // const find = toAddItems.filter(
-      //   (item) => String(item.product.id) === String(action.payload.id)
-      // );
-      // console.log("find: ", find);
-      // toAddItems.forEach((item, index) => {
-      //   console.log('item: ', item)
-      //   console.log(String(item.product.id) === String(action.payload.id));
-      //   // if (String(item.product.id) === String(action.payload.id)) {
-      //   //   console.log("ifside");
-      //   //   let currentCartItem = toAddItems[index];
-      //   //   currentCartItem.quantity = currentCartItem.quantity + 1;
-      //   //   currentCartItem.total =
-      //   //     currentCartItem.product.price * currentCartItem.quantity;
-      //   //   toAddItems[index] = currentCartItem;
-      //   //   return;
-      //   // } else {
-      //   //   console.log("elseSide");
-      //   //   let itemToAdd = {
-      //   //     product: action.payload,
-      //   //     quantity: 1,
-      //   //     total: action.payload.price,
-      //   //   };
-      //   //   toAddItems = [...state.cart, itemToAdd];
-      //   // }
-      // });
-
       let cartItem = {
         product: action.payload,
         quantity: 1,
@@ -64,6 +37,11 @@ function CartReducer(state: any, action: any) {
         ...state,
         cart: updatedCartItems,
       };
+    case types.FORM_CHANGE:
+      return {
+        ...state,
+        contact: action.payload
+      }
     default:
       return state;
   }
