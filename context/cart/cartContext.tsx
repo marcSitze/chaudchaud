@@ -6,7 +6,16 @@ import * as types from './types'
 import { CartItem as ICartItem } from "../../types/cart";
 
 const INITIAL_STATE: any = {
-  cart: []
+  cart: [],
+  contact: {
+    firstName: "Marc",
+    lastName: "Sitze",
+    phone: "699576276",
+    email: "marcsitze01@gmail.com",
+    address: "melen, yaounde",
+    point: "Carrefour melen",
+    city: "yaounde"
+  }
 }
 
 export const cartContext = createContext(INITIAL_STATE)
@@ -46,12 +55,22 @@ export const CartContextProvider = ({ children }: { children: React.ReactNode })
       payload: { id, quantity}
     })
   }
+
+  function onFormChange(form: any) {
+    console.log("FORMSTATE: ", form)
+    dispatch({
+      type: types.FORM_CHANGE,
+      payload: form
+    })
+  }
   return (
     <cartContext.Provider value={{
       cart: state.cart,
       addToCart,
       deleteCartItem,
       updateQuantity,
+      onFormChange,
+      contact: state.contact
     }}>
       {children}
     </cartContext.Provider>
