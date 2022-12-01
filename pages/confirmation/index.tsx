@@ -10,7 +10,8 @@ import { CartItem as ICartItem } from "../../types/cart";
 
 const Confirmation = () => {
   const router = useRouter();
-  const { cart } = useContext(cartContext);
+  const { cart, contact } = useContext(cartContext);
+  // const { contact } = useContext(contactContext)
 
   return (
     <div>
@@ -18,11 +19,11 @@ const Confirmation = () => {
         <div className="flex justify-between items-center pb-8 border-b">
           <div>
             <h2 className="text-sm my-2">Shipping to:</h2>
-            <p className="text-base">John Smith</p>
-            <p className="text-base">Nkolbisson, yaounde</p>
+            <p className="text-base">{contact?.firstName ?? "John Smith"}</p>
+            <p className="text-base">{contact.address ?? "Nkolbisson, yaounde"}</p>
           </div>
           <div>
-            <p className="text-sm font-bold text-blue-500">EDIT</p>
+            <Link href='/checkout' className="text-sm font-bold text-blue-500">EDIT</Link>
           </div>
         </div>
         <h3 className="text-base font-bold my-2">YOUR ORDER</h3>
