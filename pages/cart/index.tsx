@@ -14,7 +14,7 @@ import img from "../../assets/shirts/1.jpeg";
 import Link from "next/link";
 
 const Cart = () => {
-  const router = useRouter()
+  const router = useRouter();
   const { products } = useContext(productsContext);
   const { cart } = useContext(cartContext);
 
@@ -51,7 +51,8 @@ const Cart = () => {
               {cart.reduce(
                 (a: number, b: ICartItem) => Number(a) + Number(b.total),
                 0
-              ) ?? "$189.00"} XAF
+              ) ?? "$189.00"}{" "}
+              XAF
             </span>
           </h3>
           <p className="text-lg mb-14">Shipping calculated at checkout</p>
@@ -61,7 +62,10 @@ const Cart = () => {
             <p className="text-base ml-2">I agree to terms and conditions</p>
           </div>
           <div>
-            <button onClick={() => router.push('/checkout')} className="text-lg font-bold bg-black text-white py-2 px-4 rounded-full">
+            <button
+              onClick={() => router.push("/checkout")}
+              className="text-lg font-bold bg-black text-white py-2 px-4 rounded-full"
+            >
               Checkout{" "}
               <FontAwesomeIcon
                 icon={faLock}
@@ -71,28 +75,35 @@ const Cart = () => {
           </div>
         </div>
       </div>
-        <div className={styles.checkoutWrapper}>
-          <div className={`${styles.mobileCartWrapper} flex flex-col mb-10`}>
-            {cart.map((item: ICartItem, index: number) => (
-              <CartItemMobile item={item} key={index} />
-            ))}
-          </div>
-          {cart.length ? (
-            <div className="sm:hidden mb-4">
-              <button onClick={() => router.push('/checkout')} className="text-white text-base font-bold py-3 w-full bg-primary">
-                Checkout{" "}
-                <span className="ml-4">
-                  {cart.reduce(
-                    (a: number, b: ICartItem) => Number(a) + Number(b.total),
-                    0
-                  ) ?? "$189.00"}{" "}
-                  XAF
-                </span>
-              </button>
-            </div>
-          ): null}
-          <Link className="ml-4" href={'/shop'}>Continue shopping ?</Link>
+      <div className={styles.checkoutWrapper}>
+        <div className={`${styles.mobileCartWrapper} flex flex-col mb-10`}>
+          {cart.map((item: ICartItem, index: number) => (
+            <CartItemMobile item={item} key={index} />
+          ))}
         </div>
+        {cart.length ? (
+          <div className="sm:hidden mb-4">
+            <button
+              onClick={() => {
+                router.push("/checkout");
+              }}
+              className="text-white text-base font-bold py-3 w-full bg-primary"
+            >
+              Checkout{" "}
+              <span className="ml-4">
+                {cart.reduce(
+                  (a: number, b: ICartItem) => Number(a) + Number(b.total),
+                  0
+                ) ?? "$189.00"}{" "}
+                XAF
+              </span>
+            </button>
+          </div>
+        ) : null}
+        <Link className="ml-4" href={"/shop"}>
+          Continue shopping ?
+        </Link>
+      </div>
     </div>
   );
 };
