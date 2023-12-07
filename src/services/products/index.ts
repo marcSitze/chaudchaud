@@ -6,7 +6,7 @@ import {
   getDoc,
   doc,
 } from "firebase/firestore";
-import { app, database } from "../../firebase";
+import { app, database } from "../../../firebase";
 
 const COLLECTION_NAME = "products"
 

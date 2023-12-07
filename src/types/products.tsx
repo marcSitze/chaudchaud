@@ -1,3 +1,5 @@
+import { StrapiImage } from "./Image";
+
 export type Product = {
   id: number | string;
   name: string;
@@ -7,5 +9,10 @@ export type Product = {
   color: string[];
   stock: string | number;
   gender: string;
-  image: any;
+  images: {
+    data: StrapiImage[]
+  };
+  createdAt?: Date;
+  updatedAt?: Date;
+  publishedAt?: Date;
 }

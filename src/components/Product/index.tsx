@@ -7,6 +7,7 @@ import { faShippingFast, faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Product } from '../../types/products'
 import { cartContext } from "../../context/cart/cartContext";
+import config from "config";
 
 const Product = ({ product }: { product: Product }) => {
   const router = useRouter();
@@ -17,7 +18,7 @@ const Product = ({ product }: { product: Product }) => {
       className={`w-full md:w-1/2 lg:w-1/3 h-80 flex flex-col mb-14 md:px-4`}
     >
       <div className="overflow-hidden flex flex-col justify-center mb-4">
-        <Image src={product?.image ?? Tshirt} alt="tshirt" />
+        <Image width={100} height={100} src={`${config.API_URL}${product?.images?.data[0]?.attributes?.url}` ?? Tshirt} alt="tshirt" />
       </div>
       {/* <div className={`h-full`}>
             </div> */}

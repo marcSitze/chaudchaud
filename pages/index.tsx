@@ -1,18 +1,22 @@
+import {
+  faCheckCircle,
+  faDatabase,
+  faMoneyBill,
+  faShippingFast
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Product from "components/Product";
+import Testimonials from "components/Testimonials";
+import { useGetProducts } from "hooks";
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import rStyles from "../styles/Responsive.module.css";
-import OutdoorImg from "../assets/outdoor-shopping.png";
-import Tshirt from "../assets/tshirt.jpeg";
-import { faShippingFast, faStar, faMoneyBill, faCheckCircle, faDatabase } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Product from "../components/Product";
-import Testimonials from "../components/Testimonials";
-import Footer from "../components/Layouts/Footer";
-import Navbar from "../components/Layouts/Navbar";
-import ProductsData from '../helpers/productsData'
+import OutdoorImg from "../src/assets/outdoor-shopping.png";
+import styles from "../src/styles/Home.module.css";
+import rStyles from "../src/styles/Responsive.module.css";
 
 export default function Home() {
+  const { data: products = [] } = useGetProducts();
+
   return (
     <div className={styles.container}>
       <Head>
@@ -23,11 +27,17 @@ export default function Home() {
       {/* <Navbar /> */}
       <div className={styles.headerWrapper}>
         <div className={styles.header}></div>
-        <div className={`${styles.headerText} flex justify-evenly flex-wrap ${rStyles.headerText}`}>
-          <h1 className={`${styles.headerTitle} ${rStyles.headerTitle}`}>Wear the best.</h1>
+        <div
+          className={`${styles.headerText} flex justify-evenly flex-wrap ${rStyles.headerText}`}
+        >
+          <h1 className={`${styles.headerTitle} ${rStyles.headerTitle}`}>
+            Wear the best.
+          </h1>
           {/* <p>Still the second option holds promise could make the tagline shortlist if you are delivering relaxed.</p> */}
           <div className={`${rStyles.linkBoxWrapper}`}>
-            <div className={`${styles.linkBox} ${rStyles.linkBox} bg-secondary`}>
+            <div
+              className={`${styles.linkBox} ${rStyles.linkBox} bg-secondary`}
+            >
               <a>shop now</a>
             </div>
             <div className={`${styles.linkBox} ${rStyles.linkBox} bg-black`}>
@@ -36,19 +46,27 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <section className={`${styles.headerImgSection} ${rStyles.headerImgSection}`}>
+      <section
+        className={`${styles.headerImgSection} ${rStyles.headerImgSection}`}
+      >
         <div className={`${styles.headerImagesWrapper}`}>
-          <div className={`${styles.headerLeftWrapper} ${rStyles.headerLeftWrapper}`}>
-            <div className={`${styles.headerLeftOverlay} ${rStyles.headerLeftOverlay}`}>
+          <div
+            className={`${styles.headerLeftWrapper} ${rStyles.headerLeftWrapper}`}
+          >
+            <div
+              className={`${styles.headerLeftOverlay} ${rStyles.headerLeftOverlay}`}
+            >
               <div className="flex-1"></div>
-            <h3 className={styles.leftImgText}>STREET STYLE</h3>
-            <div className={`${styles.roundText} ${rStyles.roundText}`}>
-              <h5>Be your best</h5>
-            </div>
+              <h3 className={styles.leftImgText}>STREET STYLE</h3>
+              <div className={`${styles.roundText} ${rStyles.roundText}`}>
+                <h5>Be your best</h5>
+              </div>
             </div>
             {/* <Image src={OutdoorImg} className={styles.headerLeftImg} alt="some image"/> */}
           </div>
-          <div className={`${styles.headerRightWrapper} ${rStyles.headerRightWrapper}`}>
+          <div
+            className={`${styles.headerRightWrapper} ${rStyles.headerRightWrapper}`}
+          >
             <div className={styles.rightImg}>
               <div className={styles.rightOverlay}>
                 <h5>FORMAL BOY</h5>
@@ -79,7 +97,9 @@ export default function Home() {
           </h4>
         </div>
         <div className={styles.middleBoxWrapper}>
-          <div className={`${styles.box} ${rStyles.box} flex justify-center items-center`}>
+          <div
+            className={`${styles.box} ${rStyles.box} flex justify-center items-center`}
+          >
             <div className={`${styles.iconCircle} mb-4 mr-4`}>
               <FontAwesomeIcon
                 color={"#005161"}
@@ -89,7 +109,9 @@ export default function Home() {
             </div>
             <h4 className={`md:w-1/3`}>Non-contact Shipping</h4>
           </div>
-          <div className={`${styles.box} ${rStyles.box} flex justify-center items-center`}>
+          <div
+            className={`${styles.box} ${rStyles.box} flex justify-center items-center`}
+          >
             <div className={`${styles.iconCircle} mb-4 mr-4`}>
               <FontAwesomeIcon
                 color={"#005161"}
@@ -110,28 +132,42 @@ export default function Home() {
               className={`${styles.iconVal} ${rStyles.iconVal}`}
             />
           </div>
-          <h4 className={`md:w-1/2 text-center`}>Super Secure Payment System</h4>
+          <h4 className={`md:w-1/2 text-center`}>
+            Super Secure Payment System
+          </h4>
         </div>
       </div>
       <section className={`${rStyles.menuTabSection} ${styles.menuTabSection}`}>
-        <div className={`${rStyles.tabMenuContainer} flex justify-center flex-col sm:flex-row text-center mb-10`}>
+        <div
+          className={`${rStyles.tabMenuContainer} flex justify-center flex-col sm:flex-row text-center mb-10`}
+        >
           <div
             className={`${styles.subItem} ${rStyles.subItem} flex flex-col justify-center w-full sm:w-1/4 px-4 py-3 m-2 sm:text-sm border rounded-full bg-primary text-white`}
           >
             All Category
           </div>
-          <div className={`${styles.subItem} ${rStyles.subItem} flex flex-col justify-center  w-full sm:w-1/4  px-4 py-2 m-2 border rounded-full`}>
+          <div
+            className={`${styles.subItem} ${rStyles.subItem} flex flex-col justify-center  w-full sm:w-1/4  px-4 py-2 m-2 border rounded-full`}
+          >
             Men Product
           </div>
-          <div className={`${styles.subItem} ${rStyles.subItem} flex flex-col justify-center  w-full sm:w-1/4  px-4 py-2 m-2 border rounded-full`}>
+          <div
+            className={`${styles.subItem} ${rStyles.subItem} flex flex-col justify-center  w-full sm:w-1/4  px-4 py-2 m-2 border rounded-full`}
+          >
             Women Product
           </div>
-          <div className={`${styles.subItem} ${rStyles.subItem} flex flex-col justify-center  w-full sm:w-1/4  px-4 py-2 m-2 border rounded-full`}>
+          <div
+            className={`${styles.subItem} ${rStyles.subItem} flex flex-col justify-center  w-full sm:w-1/4  px-4 py-2 m-2 border rounded-full`}
+          >
             Accesories
           </div>
         </div>
         <div className={`mb-20 flex flex-wrap justify-center`}>
-          {ProductsData.filter(product => product.id < 5).map((item => <Product key={item.id} product={item} />))}
+          {products
+            ?.filter((product) => Number(product.id) < 5)
+            .map((item) => (
+              <Product key={item.id} product={{...item.attributes, id: item.id}} />
+            ))}
         </div>
       </section>
       <div className={`${styles.aboutSection} ${rStyles.aboutSection}`}>
